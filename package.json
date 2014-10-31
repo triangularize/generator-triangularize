@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository" : {  
-    "type" : "git",
-    "url" : "https://github.com/triangularize"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/triangularize"
   },
   "keywords": [
     "angular",
@@ -16,6 +16,12 @@
     "es6",
     "yeoman-generator"
   ],
-  "author": ["Christopher Parker", "Oscar Villarreal"],
-  "license": "ISC"
+  "author": [
+    "Christopher Parker",
+    "Oscar Villarreal"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "yeoman-generator": "^0.17.7"
+  }
 }
