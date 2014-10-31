@@ -1,6 +1,7 @@
 'use strict';
 
 var generators = require('yeoman-generator');
+var path = require('path');
 var yosay = require('yosay');
 var chalk = require('chalk');
 

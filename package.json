@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "chalk": "^0.5.1",
+    "path": "^0.4.9",
     "yeoman-generator": "^0.17.7",
     "yosay": "^1.0.0"
   },
