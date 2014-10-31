@@ -19,13 +19,6 @@ var TriangularGenerator = generators.Base.extend({
       chalk.red('Welcome!') + '\n' +
       chalk.yellow('You are using the Triangular angular es6 generator!')
     ));
-  },
-
-  method1: function () {
-    console.log('method 1 just ran');
-  },
-  method2: function () {
-    console.log('method 2 just ran');
   }
 });
 
