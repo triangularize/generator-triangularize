@@ -19,7 +19,12 @@ var TriangularGenerator = generators.Base.extend({
       chalk.red('Welcome!') + '\n' +
       chalk.yellow('You are using the Triangular angular es6 generator!')
     ));
-  }
+  },
+
+  scaffoldFolders: function(){
+    this.mkdir("app");
+    this.mkdir("build");
+  },
 });
 
 module.exports = TriangularGenerator;
