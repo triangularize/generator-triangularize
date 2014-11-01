@@ -5,13 +5,19 @@ var path = require('path');
 var yosay = require('yosay');
 var chalk = require('chalk');
 
-var TriangularGenerator = generators.Base.extend({
+var TriangularizeGenerator = generators.Base.extend({
 
   init: function() {
     this.pkg = require('../package.json');
     this.argument('appname', { type: String, required: false });
     this.appname = this.appname || path.basename(process.cwd());
     this.appname = this._.camelize(this._.slugify(this._.humanize(this.appname)));
+
+    this.on('end', function () {
+      if (!this.options['skip-install']) {
+        this.installDependencies();
+      }
+    });
   },
 
   info: function () {
@@ -21,10 +27,25 @@ var TriangularGenerator = generators.Base.extend({
     ));
   },
 
-  scaffoldFolders: function(){
+  app: function(){
     this.mkdir("app");
-    this.mkdir("build");
+    this.mkdir("config");
+    this.mkdir("test");
+
+    this.copy('bowerrc', '.bowerrc');
+    this.copy('editorconfig', '.editorconfig');
+    this.copy('gitignore', '.gitignore');
+    this.copy('jshintrc', '.jshintrc');
+    this.copy('README.md');
+
+    this.copy('_bower.json', 'bower.json');
+    this.copy('_gulpfile.js', 'gulpfile.js');
+    this.copy('_package.json', 'package.json');
   },
+
+  projectfiles: function () {
+
+  }
 });
 
-module.exports = TriangularGenerator;
+module.exports = TriangularizeGenerator;
