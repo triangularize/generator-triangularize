@@ -1,7 +1,5 @@
 'use strict';
 
-var App = angular.module('<%= appname %>', [
-  'ui.router'
+angular.module('<%= appname %>', [
+  'ngRoute'
 ]);
-
-export default App;

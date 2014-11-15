@@ -20,12 +20,12 @@
 
   </head>
 
-  <body ng-app="app" ng-strict-di>
+  <body ng-app="<%= appname %>">
+
+    <div ng-view></div>
 
     <!-- inject:templates -->
     <!-- endinject -->
-
-    <ng-view></ng-view>
 
     <!-- build:js vendors.js -->
     <!-- bower:js -->
