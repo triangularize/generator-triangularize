@@ -1,5 +1,4 @@
-generator-triangularize
-=======================
+# generator-triangularize  [![Build Status](https://secure.travis-ci.org/yeoman/generator-triangularize.svg?branch=master)](http://travis-ci.org/yeoman/generator-triangularize)
 
 To run as a yeoman project
 
