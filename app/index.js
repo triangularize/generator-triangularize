@@ -27,33 +27,54 @@ var TriangularizeGenerator = generators.Base.extend({
     ));
   },
 
-  copyDotFiles: function() {
+  copyBaseFiles: function() {
+
+    // Dot files
     this.copy('bowerrc', '.bowerrc');
     this.copy('editorconfig', '.editorconfig');
     this.copy('gitignore', '.gitignore');
     this.copy('htaccess', '.htaccess');
     this.copy('jshintrc', '.jshintrc');
-  },
 
-  createScaffoldFolders: function() {
-    this.mkdir("app");
-    this.mkdir("app/config");
-    this.mkdir("app/controllers");
-    this.mkdir("app/views");
-    this.mkdir("app/styles");
-
-    this.mkdir("test");
-  },
-
-  copyPackageFiles: function() {
+    // Package files
     this.copy('_bower.json', 'bower.json');
     this.copy('_package.json', 'package.json');
-  },
 
-  app: function(){
     this.copy('_gulpfile.js', 'gulpfile.js');
     this.copy('README.md');
     this.copy('robots.txt');
+  },
+
+  setupBase: function() {
+    this.mkdir("app");
+
+    this.copy('app/app.js');
+    this.copy('app/index.html');
+  },
+
+  setupConfig: function() {
+    this.mkdir('app/config');
+    this.copy('app/config/router.js')
+  },
+
+  setupControllers: function() {
+    this.mkdir('app/controllers');
+
+    this.mkdir('app/controllers/home');
+    this.copy('app/controllers/home/index.js');
+  },
+
+  setupStyles: function() {
+    this.mkdir('app/styles');
+
+    this.copy('app/styles/app.scss');
+  },
+
+  setupViews: function() {
+    this.mkdir('app/views');
+
+    this.mkdir('app/views/home');
+    this.copy('app/views/home/index.html');
   }
 });
 
