@@ -5,6 +5,7 @@
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.9",
+    "gulp-jshint": "^1.8.6",
     "gulp-traceur": "^0.13.0"
   },
   "engines": {

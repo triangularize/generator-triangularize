@@ -27,24 +27,33 @@ var TriangularizeGenerator = generators.Base.extend({
     ));
   },
 
-  app: function(){
-    this.mkdir("app");
-    this.mkdir("config");
-    this.mkdir("test");
-
+  copyDotFiles: function() {
     this.copy('bowerrc', '.bowerrc');
     this.copy('editorconfig', '.editorconfig');
     this.copy('gitignore', '.gitignore');
+    this.copy('htaccess', '.htaccess');
     this.copy('jshintrc', '.jshintrc');
-    this.copy('README.md');
+  },
 
+  createScaffoldFolders: function() {
+    this.mkdir("app");
+    this.mkdir("app/config");
+    this.mkdir("app/controllers");
+    this.mkdir("app/views");
+    this.mkdir("app/styles");
+
+    this.mkdir("test");
+  },
+
+  copyPackageFiles: function() {
     this.copy('_bower.json', 'bower.json');
-    this.copy('_gulpfile.js', 'gulpfile.js');
     this.copy('_package.json', 'package.json');
   },
 
-  projectfiles: function () {
-
+  app: function(){
+    this.copy('_gulpfile.js', 'gulpfile.js');
+    this.copy('README.md');
+    this.copy('robots.txt');
   }
 });
 

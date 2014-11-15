@@ -5,7 +5,7 @@ var helpers = require('yeoman-generator').test;
 
 describe('triangularize generator', function () {
   beforeEach(function (done) {
-    helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
+    helpers.testDirectory(path.join(__dirname, 'tmp'), function (err) {
       if (err) {
         return done(err);
       }
