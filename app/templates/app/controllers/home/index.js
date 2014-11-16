@@ -8,4 +8,4 @@ function HomeController() {
   vm.message = 'Hello from AngularJS';
 }
 
-App.controller('Controllers.Home.Index', HomeController);
+export default App.controller('Controllers.Home.Index', HomeController);

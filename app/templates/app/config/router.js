@@ -37,4 +37,4 @@ function Router($routeProvider) {
   });
 }
 
-App.config(Router);
+export default App.config(Router);

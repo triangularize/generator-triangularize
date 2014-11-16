@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/triangularize/generator-triangularize.svg?branch=master)](http://travis-ci.org/triangularize/generator-triangularize)
 [![Dependency Status](https://david-dm.org/triangularize/generator-triangularize.png)](https://david-dm.org/triangularize/generator-triangularize.png)
 
-# generator-triangularize 
+# generator-triangularize
 
 To run as a yeoman project
 

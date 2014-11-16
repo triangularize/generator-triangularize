@@ -41,6 +41,15 @@ var TriangularizeGenerator = generators.Base.extend({
     this.copy('_package.json', 'package.json');
 
     this.copy('_gulpfile.js', 'gulpfile.js');
+    this.mkdir('gulp');
+    this.copy('gulp/build.js');
+    this.copy('gulp/e2e-tests.js');
+    this.copy('gulp/proxy.js');
+    this.copy('gulp/server.js');
+    this.copy('gulp/unit-tests.js');
+    this.copy('gulp/watch.js');
+    this.copy('gulp/wiredep.js');
+
     this.copy('README.md');
     this.copy('robots.txt');
   },
