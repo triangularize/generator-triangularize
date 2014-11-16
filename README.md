@@ -26,4 +26,8 @@ npm install
 npm test
 ```
 
+### Notes
+
+Lots of the code here is borrowed from https://github.com/Swiip/generator-gulp-angular/
+
 

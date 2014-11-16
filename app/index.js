@@ -45,34 +45,40 @@ var TriangularizeGenerator = generators.Base.extend({
     this.copy('robots.txt');
   },
 
-  setupBase: function() {
+  setupApp: function() {
     this.mkdir("app");
 
     this.copy('app/app.js');
     this.copy('app/index.html');
   },
 
-  setupConfig: function() {
+  setupAppAssets: function() {
+    this.mkdir('app/assets');
+
+    this.mkdir('app/assets/stylesheets');
+    this.copy('app/assets/stylesheets/app.scss');
+
+    this.mkdir('app/assets/images');
+  },
+
+  setupAppConfig: function() {
     this.mkdir('app/config');
     this.copy('app/config/router.js')
   },
 
-  setupControllers: function() {
-    this.mkdir('app/controllers');
+  setupAppComponents: function() {
+    this.mkdir('app/components');
+    this.copy('app/components/gitkeep', 'app/components/.gitkeep');
+  },
 
+  setupAppControllers: function() {
+    this.mkdir('app/controllers');
     this.mkdir('app/controllers/home');
     this.copy('app/controllers/home/index.js');
   },
 
-  setupStyles: function() {
-    this.mkdir('app/styles');
-
-    this.copy('app/styles/app.scss');
-  },
-
-  setupViews: function() {
+  setupAppViews: function() {
     this.mkdir('app/views');
-
     this.mkdir('app/views/home');
     this.copy('app/views/home/index.html');
   }
