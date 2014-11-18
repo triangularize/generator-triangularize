@@ -1,4 +1,4 @@
-'use strict';
+import Controllers from 'controllers/main';
 
 var modules = [
   'ngRoute'

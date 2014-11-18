@@ -9,26 +9,26 @@ function Router($routeProvider) {
   //
   // .route.when('/products', {
   //   templateUrl: 'views/products/index.html',
-  //   controller: 'Controller.Products.Index',
-  //   controllerAs: 'vm'
+  //   controller: 'ProductIndexController',
+  //   controllerAs: 'tg'
   // })
   //
   // .route.when('/products/new', {
   //   templateUrl: 'views/products/new.html',
-  //   controller: 'Controller.Products.New',
-  //   controllerAs: 'vm'
+  //   controller: 'ProductNewController',
+  //   controllerAs: 'tg'
   // })
   //
   // .route.when('/products/:id/edit', {
   //   templateUrl: 'views/products/index.html',
-  //   controller: 'Controller.Products.Index',
-  //   controllerAs: 'vm'
+  //   controller: 'ProductIndexController',
+  //   controllerAs: 'tg'
   // })
 
   .when('/', {
     templateUrl: 'views/home/index.html',
-    controller: 'Controllers.Home.Index',
-    controllerAs: 'vm'
+    controller: 'HomeIndexController',
+    controllerAs: 'tg'
   })
 
   // if no routes match, redirect to '/'

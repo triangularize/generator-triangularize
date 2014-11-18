@@ -1,11 +1,14 @@
-'use strict';
+export class HomeIndexController {
 
-import App from 'app';
+  constructor() {
+    this._message = "Hello";
+  }
 
-function HomeController() {
-  var vm = this;
+  get message() {
+    return this._message;
+  }
 
-  vm.message = 'Hello from AngularJS';
+  updateMessage() {
+    this._message = "World";
+  }
 }
-
-export default App.controller('Controllers.Home.Index', HomeController);

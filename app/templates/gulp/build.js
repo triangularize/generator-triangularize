@@ -26,9 +26,13 @@ gulp.task('scripts', function() {
   return gulp.src(['app/app.js', 'app/{components,config,controllers}/**/*.js'])
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
-    .pipe($.size())
-    .pipe($.traceur({modules: 'amd'}))
-    .pipe(gulp.dest('.tmp/compiled'));
+    .pipe($.traceur({
+      modules: 'amd',
+      experimental: true
+    }))
+    .pipe($.concat('<%= appname %>.js'))
+    .pipe(gulp.dest('.tmp'))
+    .pipe($.size());
 });
 
 gulp.task('partials', function() {
@@ -51,7 +55,7 @@ gulp.task('html', ['styles', 'scripts', 'partials'], function() {
   var cssFilter = $.filter('**/*.css');
   var assets;
 
-  return gulp.src('src/*.html')
+  return gulp.src('app/*.html')
     .pipe($.inject(gulp.src('.tmp/{app,components}/**/*.js'), {
       read: false,
       starttag: '<!-- inject:partials -->',
